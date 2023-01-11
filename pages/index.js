@@ -23,6 +23,7 @@ import web6 from "../public/web6.png"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
+  setDarkMode("dark")
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -48,9 +49,9 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                  href="#"
+                  href="mailto:alerrandro.janio07@gmail.com"
                 >
-                  Resume
+                  Contate-me
                 </a>
               </li>
             </ul>
