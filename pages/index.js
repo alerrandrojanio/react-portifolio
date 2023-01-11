@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import Head from "next/head"
 
@@ -23,7 +23,10 @@ import web6 from "../public/web6.png"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
-  setDarkMode("dark")
+
+  useEffect(() => {
+    setDarkMode(!darkMode)
+  }, [])
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -95,7 +98,10 @@ export default function Home() {
               <AiOutlineInstagram className="hover:text-teal-600 dark:hover:text-teal-600" />
             </a>
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:w-96 md:h-96">
+        </section>
+
+        <section>
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 overflow-hidden md:w-96 md:h-96">
             <Image src={deved} layout="fill" objectFit="cover" alt="Avatar" />
           </div>
         </section>
@@ -177,7 +183,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={web1}
                 className="rounded-lg object-cover"
@@ -187,7 +193,7 @@ export default function Home() {
                 alt="Projeto de portifólio 1"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={web2}
                 className="rounded-lg object-cover"
@@ -197,7 +203,7 @@ export default function Home() {
                 alt="Projeto de portifólio 2"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={web3}
                 className="rounded-lg object-cover"
@@ -207,7 +213,7 @@ export default function Home() {
                 alt="Projeto de portifólio 3"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={web4}
                 className="rounded-lg object-cover"
@@ -217,7 +223,7 @@ export default function Home() {
                 alt="Projeto de portifólio 4"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={web5}
                 className="rounded-lg object-cover"
@@ -227,7 +233,7 @@ export default function Home() {
                 alt="Projeto de portifólio 5"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={web6}
                 className="rounded-lg object-cover"
