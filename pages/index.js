@@ -37,6 +37,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+        {/* Nav  */}
         <section className=" h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons dark:text-white">
@@ -59,7 +60,9 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="text-center p-10">
+
+          {/* Principal  */}
+          <div className="text-center p-10 ">
             <h2 className="text-5xl py-2 text-teal-600 font font-medium md:text-6xl">
               Alerrandro Janio
             </h2>
@@ -100,16 +103,18 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Avatar */}
         <section>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 overflow-hidden md:w-96 md:h-96">
             <Image src={deved} layout="fill" objectFit="cover" alt="Avatar" />
           </div>
         </section>
 
+        {/* Servicos */}
         <section className="mt-20">
           <div className="text-center">
             <h3 className="text-3xl py-1 dark:text-white">
-              Servicos que ofereço
+              Serviços que ofereço
             </h3>
             <p className="text-md py-2 leading-8 text-gray-800 md:text-xl max-w-3xl mx-auto dark:text-gray-400">
               <span className="text-teal-500">Técnico em Informática</span> com
@@ -173,78 +178,182 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Portifólio */}
         <section>
           <div className="text-center">
-            <h3 className="text-3xl py-1 dark:text-white">Portifolio</h3>
+            <h3 className="text-3xl py-1 dark:text-white">Portifólio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 md:text-xl max-w-3xl mx-auto dark:text-gray-400">
               Buscanco apender cada vez mais sobre{" "}
               <span className="text-teal-500">APIs em C# </span>e Front-end com{" "}
               <span className="text-teal-500">React.</span>
             </p>
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/4 flex-1">
-              <Image
-                src={web1}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Projeto de portifólio 1"
-              />
+          <div className="flex flex-col gap-10 py-10 justify-center lg:flex-row lg:flex-wrap">
+            {/* Portifólio Imagem 1 */}
+            <div className="group relative items-center justify-center overflow-hidden">
+              <div className="basis-1/4 flex-1 hover:rounded-lg dark:group-hover:rounded-lg overflow-hidden">
+                <Image
+                  src={web1}
+                  className="rounded-lg object-cover group-hover:blur-md transition-transform"
+                  width={"100%"}
+                  sizes={"500px"}
+                  layout="responsive"
+                  alt="Projeto de portifólio 1"
+                />
+              </div>
+              <div className="rounded-lg absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[80%] group-hover:translate-y-0 transition-all">
+                <h1 className="text-3xl font-semibold text-teal-600">
+                  Stranger Things
+                </h1>
+                <p className="text-md text-gray-600 mt-2 mb-3">
+                  Projeto mundo invertido.
+                </p>
+                <a
+                  href="https://alerrandrojanio.github.io/semana-frontend-mundo-invertido/"
+                  className="rounded-full bg-gray-800 py-2 px-3.5 text-sm capitalize text-white mt-6 hover:bg-teal-600"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <div>Deploy</div>
+                </a>
+                <a
+                  href="https://github.com/alerrandrojanio/semana-frontend-mundo-invertido"
+                  className="rounded-full bg-gray-800 py-2 px-3.5 text-sm capitalize text-white mt-2 hover:bg-teal-600"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <div>Repositório</div>
+                </a>
+              </div>
             </div>
-            <div className="basis-1/4 flex-1">
-              <Image
-                src={web2}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Projeto de portifólio 2"
-              />
+
+            {/* Portifólio Imagem 2 */}
+            <div className="group relative items-center justify-center overflow-hidden">
+              <div className="basis-1/4 flex-1 hover:rounded-lg dark:group-hover:rounded-lg overflow-hidden">
+                <Image
+                  src={web2}
+                  className="rounded-lg object-cover group-hover:blur-md transition-transform"
+                  width={"100%"}
+                  sizes={"500px"}
+                  layout="responsive"
+                  alt="Projeto de portifólio 1"
+                />
+              </div>
+              <div className="rounded-lg absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[80%] group-hover:translate-y-0 transition-all">
+                <h1 className="text-3xl font-semibold text-teal-600">
+                  Design System
+                </h1>
+                <p className="text-md text-gray-600 mt-2 mb-3">
+                  Projeto de Design System com Storybook.
+                </p>
+                <a
+                  href="https://alerrandrojanio.github.io/ignite-lab-design-system"
+                  className="rounded-full bg-gray-800 py-2 px-3.5 text-sm capitalize text-white mt-6 hover:bg-teal-600"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <div>Deploy</div>
+                </a>
+                <a
+                  href="https://alerrandrojanio.github.io/ignite-lab-design-system"
+                  className="rounded-full bg-gray-800 py-2 px-3.5 text-sm capitalize text-white mt-2 hover:bg-teal-600"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <div>Repositório</div>
+                </a>
+              </div>
             </div>
-            <div className="basis-1/4 flex-1">
-              <Image
-                src={web3}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Projeto de portifólio 3"
-              />
+
+            {/* Portifólio Imagem 3 */}
+            <div className="group relative items-center justify-center overflow-hidden">
+              <div className="basis-1/4 flex-1 hover:rounded-lg dark:group-hover:rounded-lg overflow-hidden">
+                <Image
+                  src={web3}
+                  className="rounded-lg object-cover group-hover:blur-md transition-transform"
+                  width={"100%"}
+                  sizes={"500px"}
+                  layout="responsive"
+                  alt="Projeto de portifólio 1"
+                />
+              </div>
+              <div className="rounded-lg absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[80%] group-hover:translate-y-0 transition-all">
+                <h1 className="text-3xl font-semibold text-teal-600">
+                  API Pessoas/Contratos
+                </h1>
+                <p className="text-md text-gray-600 mt-2 mb-3">API em C#.</p>
+                <a
+                  href="#"
+                  className="rounded-full bg-gray-800 py-2 px-3.5 text-sm capitalize text-white mt-6 hover:bg-teal-600"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <div>Deploy</div>
+                </a>
+                <a
+                  href="https://github.com/alerrandrojanio/api-pessoas-contratos"
+                  className="rounded-full bg-gray-800 py-2 px-3.5 text-sm capitalize text-white mt-2 hover:bg-teal-600"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <div>Repositório</div>
+                </a>
+              </div>
             </div>
-            <div className="basis-1/4 flex-1">
-              <Image
-                src={web4}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Projeto de portifólio 4"
-              />
-            </div>
-            <div className="basis-1/4 flex-1">
-              <Image
-                src={web5}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Projeto de portifólio 5"
-              />
-            </div>
-            <div className="basis-1/4 flex-1">
-              <Image
-                src={web6}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Projeto de portifólio 6"
-              />
+
+            {/* Portifólio Imagem 4 */}
+            <div className="group relative items-center justify-center overflow-hidden">
+              <div className="basis-1/4 flex-1 hover:rounded-lg dark:group-hover:rounded-lg overflow-hidden">
+                <Image
+                  src={web4}
+                  className="rounded-lg object-cover group-hover:blur-md transition-transform"
+                  width={"100%"}
+                  sizes={"500px"}
+                  layout="responsive"
+                  alt="Projeto de portifólio 1"
+                />
+              </div>
+              <div className="rounded-lg absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[80%] group-hover:translate-y-0 transition-all">
+                <h1 className="text-3xl font-semibold text-teal-600">
+                  Be The Hero
+                </h1>
+                <p className="text-md text-gray-600 mt-2 mb-3">
+                  Projeto be the hero realizado pela Rocketseat.
+                </p>
+                <a
+                  href="#"
+                  className="rounded-full bg-gray-800 py-2 px-3.5 text-sm capitalize text-white mt-6 hover:bg-teal-600"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <div>Deploy</div>
+                </a>
+                <a
+                  href="https://github.com/alerrandrojanio/be-the-hero"
+                  className="rounded-full bg-gray-800 py-2 px-3.5 text-sm capitalize text-white mt-2 hover:bg-teal-600"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <div>Repositório</div>
+                </a>
+              </div>
             </div>
           </div>
         </section>
+
+        {/* Rodapé */}
         <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px]">
           <p className="font-normal text-center text-md leading-[27px] text-gray-600 dark:text-gray-400">
             2023 Alerrandro Janio. All Rights Reserved.
